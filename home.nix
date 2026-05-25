@@ -7,6 +7,7 @@ in
   imports = [
     programs/btop.nix
     programs/fuzzel.nix
+    programs/fzf.nix
     programs/git.nix
     programs/hypridle.nix
     programs/hyprland.nix
@@ -29,6 +30,7 @@ in
 
     packages = with pkgs; [
       alsa-utils # Advanced Linux Sound Architecture
+      arduino # Electronics prototyping
       bitwarden-desktop # Password manager
       bluez
       bluez-tools
@@ -37,6 +39,7 @@ in
       chirp # Radio programming tool
       claude-code # Claude code
       clojure # Clojure
+      cloudflared # Cloudflare services
       dig # DNS lookup tool
       discord
       extremetuxracer
@@ -78,6 +81,7 @@ in
       socat # Data relay tool
       spotify # Spotify
       steam # Steam
+      super-slicer-beta # 3D printing
       awww # Wallpaper manager
       teams-for-linux
       tex-fmt # LaTeX formatter
@@ -91,6 +95,7 @@ in
       uv # Python package manager
       v4l-utils # Video4Linux utilities
       vlc # Media player
+      websocat # CLI for WebSockets
       waybar # Taskbar
       wev # Wayland event viewer
       wl-clipboard # Wayland clipboard CLI

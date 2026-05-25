@@ -108,6 +108,7 @@
 
   # Automatically set timezone from location
   services.automatic-timezoned.enable = true;
+  services.geoclue2.geoProviderUrl = "https://api.beacondb.net/v1/geolocate";
 
   hardware.graphics.enable32Bit = true;
 
