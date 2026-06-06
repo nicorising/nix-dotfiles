@@ -94,6 +94,7 @@ in
       usbutils # USB CLI tools
       uv # Python package manager
       v4l-utils # Video4Linux utilities
+      vial # Keyboard configuration
       vlc # Media player
       websocat # CLI for WebSockets
       waybar # Taskbar
@@ -109,6 +110,7 @@ in
           ipykernel # Jupyter kernel
           ipython # IPython kernel
           jupyter-client # Jupyer
+          jupytext # Jupyter to Python conversion
           keras # Keras ML API
           matplotlib # Plotting
           mypy # Static typing
@@ -128,7 +130,7 @@ in
           spacy # Natural language toolkit
           spacy-models.en_core_web_sm # Spacy English model
           statsmodels # Statistical models
-          jupytext # Jupyter to Python conversion
+          ultralytics # YOLO models
         ]
       ))
 
