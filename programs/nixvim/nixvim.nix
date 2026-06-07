@@ -113,7 +113,7 @@
             { name = "buffer"; }
           ];
           mapping = {
-            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            "<cr>" = "cmp.mapping.confirm({ select = true })";
             "<Tab>" = "cmp.mapping.select_next_item()";
             "<S-Tab>" = "cmp.mapping.select_prev_item()";
           };
@@ -162,15 +162,6 @@
               filetype = "neo-tree";
             }
           ];
-        };
-      };
-
-      toggleterm = {
-        enable = true;
-        settings = {
-          start_in_insert = true;
-          direction = "vertical";
-          size = 60;
         };
       };
 
@@ -234,8 +225,8 @@
     keymaps = [
       {
         mode = "n";
-        key = "<leader><CR>";
-        action = "i<CR><Esc>";
+        key = "<leader><cr>";
+        action = "i<cr><Esc>";
         options.desc = "Insert line break";
       }
       {
@@ -273,7 +264,7 @@
       {
         mode = "n";
         key = "<leader>e";
-        action = "<cmd>Neotree toggle<CR>";
+        action = "<cmd>Neotree toggle<cr>";
         options.desc = "Toggle explorer";
       }
 
@@ -281,25 +272,25 @@
       {
         mode = "n";
         key = "<leader>ff";
-        action = "<cmd>lua FocusEditor()<CR><cmd>Telescope find_files<CR>";
+        action = "<cmd>Telescope find_files<cr>";
         options.desc = "Find files";
       }
       {
         mode = "n";
         key = "<leader>fg";
-        action = "<cmd>lua FocusEditor()<CR><cmd>Telescope live_grep<CR>";
+        action = "<cmd>Telescope live_grep<cr>";
         options.desc = "Live grep";
       }
       {
         mode = "n";
         key = "<leader>fr";
-        action = "<cmd>lua FocusEditor()<CR><cmd>Telescope oldfiles<CR>";
+        action = "<cmd>Telescope oldfiles<cr>";
         options.desc = "Recent files";
       }
       {
         mode = "n";
         key = "<leader>fs";
-        action = "<cmd>lua FocusEditor()<CR><cmd>Telescope lsp_document_symbols<CR>";
+        action = "<cmd>Telescope lsp_document_symbols<cr>";
         options.desc = "LSP symbols";
       }
       {
@@ -350,95 +341,81 @@
       {
         mode = "n";
         key = "<leader>1";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 1<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 1<cr>";
         options.desc = "Go to buffer 1";
       }
       {
         mode = "n";
         key = "<leader>2";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 2<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 2<cr>";
         options.desc = "Go to buffer 2";
       }
       {
         mode = "n";
         key = "<leader>3";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 3<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 3<cr>";
         options.desc = "Go to buffer 3";
       }
       {
         mode = "n";
         key = "<leader>4";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 4<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 4<cr>";
         options.desc = "Go to buffer 4";
       }
       {
         mode = "n";
         key = "<leader>5";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 5<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 5<cr>";
         options.desc = "Go to buffer 5";
       }
       {
         mode = "n";
         key = "<leader>6";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 6<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 6<cr>";
         options.desc = "Go to buffer 6";
       }
       {
         mode = "n";
         key = "<leader>7";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 7<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 7<cr>";
         options.desc = "Go to buffer 7";
       }
       {
         mode = "n";
         key = "<leader>8";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 8<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 8<cr>";
         options.desc = "Go to buffer 8";
       }
       {
         mode = "n";
         key = "<leader>9";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineGoToBuffer 9<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 9<cr>";
         options.desc = "Go to buffer 9";
       }
       {
         mode = "n";
         key = "<leader>,";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineMovePrev<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineMovePrev<cr>";
         options.desc = "Move buffer left";
       }
       {
         mode = "n";
         key = "<leader>.";
-        action = "<cmd>lua FocusEditor()<CR><cmd>BufferLineMoveNext<CR>";
+        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineMoveNext<cr>";
         options.desc = "Move buffer right";
-      }
-
-      # Terminal
-      {
-        mode = "n";
-        key = "<leader>t";
-        action = "<cmd>ToggleTerm direction=vertical size=60<CR>";
-        options.desc = "Toggle terminal";
-      }
-      {
-        mode = "t";
-        key = "<Esc><Esc>";
-        action = "<C-\\><C-n>";
-        options.desc = "Exit terminal mode";
       }
 
       # Git
       {
         mode = "n";
         key = "<leader>gp";
-        action = "<cmd>Gitsigns preview_hunk<CR>";
+        action = "<cmd>Gitsigns preview_hunk<cr>";
         options.desc = "Preview Git hunk";
       }
       {
         mode = "n";
         key = "<leader>gr";
-        action = "<cmd>Gitsigns reset_hunk<CR>";
+        action = "<cmd>Gitsigns reset_hunk<cr>";
         options.desc = "Reset Git hunk";
       }
 

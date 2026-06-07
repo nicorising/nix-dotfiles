@@ -2,6 +2,33 @@
 
 let
   addScript = name: pkgs.writeShellScriptBin name (builtins.readFile ./scripts/${name}.sh);
+  scaleApp =
+    pkg: vars:
+    let
+      envArgs = builtins.concatStringsSep " " (
+        pkgs.lib.mapAttrsToList (k: v: ''--set ${k} "${toString v}"'') vars
+      );
+    in
+    pkgs.symlinkJoin {
+      name = pkg.pname or pkg.name;
+      paths = [ pkg ];
+      nativeBuildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        for bin in $out/bin/*; do
+          [ -e "$bin" ] && wrapProgram "$bin" ${envArgs}
+        done
+        if [ -d "$out/share/applications" ]; then
+          for desktop in $out/share/applications/*.desktop; do
+            [ -e "$desktop" ] || continue
+            if [ -L "$desktop" ]; then
+              target=$(readlink -f "$desktop")
+              rm "$desktop"
+              sed "s|${pkg}/bin|$out/bin|g" "$target" > "$desktop"
+            fi
+          done
+        fi
+      '';
+    };
 in
 {
   imports = [
@@ -19,6 +46,7 @@ in
     programs/ranger.nix
     programs/ssh.nix
     programs/thunderbird.nix
+    programs/tmux.nix
     programs/vscode.nix
     programs/waybar/waybar.nix
     programs/zathura.nix
@@ -36,7 +64,7 @@ in
       bluez-tools
       brightnessctl # CLI screen brightness control
       capitaine-cursors-themed # Cursor theme
-      chirp # Radio programming tool
+      (scaleApp chirp { GDK_DPI_SCALE = "1.5"; }) # Radio programming tool
       claude-code # Claude code
       clojure # Clojure
       cloudflared # Cloudflare services
@@ -94,7 +122,7 @@ in
       usbutils # USB CLI tools
       uv # Python package manager
       v4l-utils # Video4Linux utilities
-      vial # Keyboard configuration
+      (scaleApp vial { QT_FONT_DPI = "144"; }) # Keyboard configuration
       vlc # Media player
       websocat # CLI for WebSockets
       waybar # Taskbar
