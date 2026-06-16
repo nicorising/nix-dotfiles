@@ -3,14 +3,16 @@
 
   inputs = {
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mac-app-util.url = "github:hraban/mac-app-util";
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixvim = {
-      url = "github:nix-community/nixvim";
+      url = "github:nix-community/nixvim/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -22,10 +24,11 @@
 
   outputs =
     {
-      nixpkgs,
       home-manager,
-      nix-darwin,
+      mac-app-util,
+      nixpkgs,
       nixvim,
+      nix-darwin,
       ...
     }:
 
@@ -50,18 +53,20 @@
       };
 
       # TODO: Replace "macbook" with the actual hostname
-      darwinConfigurations.macbook = nix-darwin.lib.darwinSystem {
+      darwinConfigurations.MWX-ML-NRising = nix-darwin.lib.darwinSystem {
         modules = [
           ./darwin/configuration.nix
 
+          mac-app-util.darwinModules.default
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.nico = {
+            home-manager.users.nrising = {
               imports = [
                 ./darwin/home.nix
+                mac-app-util.homeManagerModules.default
                 nixvim.homeModules.nixvim
               ];
             };

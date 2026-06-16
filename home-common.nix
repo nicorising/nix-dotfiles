@@ -11,7 +11,6 @@
     programs/kitty.nix
     programs/nixvim/nixvim.nix
     programs/ranger.nix
-    programs/ssh.nix
     programs/tmux.nix
   ];
 
@@ -42,9 +41,8 @@
   };
 
   home.shellAliases = {
+    ls = "ls --color=auto";
     grep = "grep --color=auto";
     ssh = "kitten ssh"; # Fix terminfo issues when SSHing from kitty
   };
-
-  programs.bash.enable = true;
 }

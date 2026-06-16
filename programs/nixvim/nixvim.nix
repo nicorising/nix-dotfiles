@@ -3,6 +3,7 @@
 {
   programs.nixvim = {
     enable = true;
+    nixpkgs.config.allowUnfree = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
@@ -39,7 +40,10 @@
           clojure_lsp.enable = true;
           eslint.enable = true;
           lua_ls.enable = true;
-          nil_ls.enable = true;
+          nil_ls = {
+            enable = true;
+            settings.nix.flake.autoArchive = true; # Auto-fetch flake inputs
+          };
           pyright.enable = true;
           ruff.enable = true;
           tailwindcss.enable = true;
@@ -176,23 +180,19 @@
       # Image rendering
       image = {
         enable = true;
-        backend = "kitty";
-
-        integrations = {
-          markdown.enabled = true;
-        };
+        settings.backend = "kitty";
       };
 
       # LaTeX
-      vimtex = {
-        enable = true;
-        texlivePackage = null;
+      # vimtex = {
+      #   enable = true;
+      #   texlivePackage = null;
 
-        settings = {
-          view_method = "zathura";
-          compiler_method = "latexmk";
-        };
-      };
+      #   settings = {
+      #     view_method = "zathura";
+      #     compiler_method = "latexmk";
+      #   };
+      # };
 
       # Lua for Neovim
       lazydev.enable = true;
@@ -202,17 +202,17 @@
 
     extraPlugins = [
       # Python virtual environment selector
-      (pkgs.vimUtils.buildVimPlugin {
-        pname = "venv-selector-nvim";
-        version = "main";
+      # (pkgs.vimUtils.buildVimPlugin {
+      # pname = "venv-selector-nvim";
+      # version = "main";
 
-        src = pkgs.fetchFromGitHub {
-          owner = "linux-cultist";
-          repo = "venv-selector.nvim";
-          rev = "main";
-          sha256 = "+0bpYcb+sHzcxHxBLzNzeSFqk+hfkPhfmp0yxjuhbg4=";
-        };
-      })
+      # src = pkgs.fetchFromGitHub {
+      #   owner = "linux-cultist";
+      #   repo = "venv-selector.nvim";
+      #   rev = "main";
+      #   sha256 = "+0bpYcb+sHzcxHxBLzNzeSFqk+hfkPhfmp0yxjuhbg4=";
+      # };
+      # })
     ];
 
     colorschemes.gruvbox = {

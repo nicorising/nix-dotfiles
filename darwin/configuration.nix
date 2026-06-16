@@ -2,13 +2,13 @@
 
 {
   system = {
-    primaryUser = "nico";
+    primaryUser = "nrising";
     stateVersion = 6;
   };
 
-  users.users.nico = {
-    name = "nico";
-    home = "/Users/nico";
+  users.users.nrising = {
+    name = "nrising";
+    home = "/Users/nrising";
   };
 
   nixpkgs = {
@@ -17,6 +17,29 @@
   };
 
   nix.enable = false;
+
+  system.defaults = {
+    NSGlobalDomain = {
+      AppleInterfaceStyle = "Dark";
+      InitialKeyRepeat = 12; # ~200ms
+      KeyRepeat = 2; # ~30 Hz
+      _HIHideMenuBar = true;
+    };
+
+    dock.autohide = true;
+  };
+
+  homebrew = {
+    enable = true;
+    taps = [
+      "nikitabobko/tap"
+    ];
+    casks = [
+      "docker-desktop"
+      "nikitabobko/tap/aerospace"
+      "postico"
+    ];
+  };
 
   programs.zsh.enable = true;
 }

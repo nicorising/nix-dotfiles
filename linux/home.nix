@@ -40,6 +40,7 @@ in
     ../programs/hyprlock.nix
     ../programs/librewolf.nix
     ../programs/nh.nix
+    ../programs/ssh.nix
     ../programs/thunderbird.nix
     ../programs/vscode.nix
     ../programs/waybar/waybar.nix
@@ -148,7 +149,7 @@ in
 
     # Copy over wallpapers
     file.".local/share/wallpapers" = {
-      source = ./wallpapers;
+      source = ../wallpapers;
       recursive = true;
     };
 
@@ -218,4 +219,6 @@ in
       gtk-application-prefer-dark-theme = true;
     };
   };
+
+  programs.bash.enable = true;
 }
