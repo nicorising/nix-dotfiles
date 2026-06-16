@@ -32,24 +32,18 @@ let
 in
 {
   imports = [
-    programs/btop.nix
-    programs/fuzzel.nix
-    programs/fzf.nix
-    programs/git.nix
-    programs/hypridle.nix
-    programs/hyprland.nix
-    programs/hyprlock.nix
-    programs/kitty.nix
-    programs/librewolf.nix
-    programs/nh.nix
-    programs/nixvim/nixvim.nix
-    programs/ranger.nix
-    programs/ssh.nix
-    programs/thunderbird.nix
-    programs/tmux.nix
-    programs/vscode.nix
-    programs/waybar/waybar.nix
-    programs/zathura.nix
+    ../home-common.nix
+
+    ../programs/fuzzel.nix
+    ../programs/hypridle.nix
+    ../programs/hyprland.nix
+    ../programs/hyprlock.nix
+    ../programs/librewolf.nix
+    ../programs/nh.nix
+    ../programs/thunderbird.nix
+    ../programs/vscode.nix
+    ../programs/waybar/waybar.nix
+    ../programs/zathura.nix
   ];
 
   home = {
@@ -66,34 +60,23 @@ in
       capitaine-cursors-themed # Cursor theme
       (scaleApp chirp { GDK_DPI_SCALE = "1.5"; }) # Radio programming tool
       clang-tools # CLI tools for C/C++
-      claude-code # Claude code
       clojure # Clojure
       cloudflared # Cloudflare services
       dig # DNS lookup tool
       discord
       extremetuxracer
-      fastfetch # System information display
-      fd # File finder
-      ffmpeg # Image processing
       gcc # Compilers
       gnumake # Make
       hyprshot # Screenshot tool
       inotify-tools # Tools for inotify
-      jq # CLI JSON processor
       keepassxc # Password manager
       killall # Process killing command
       libnotify # Notification sender
       libreoffice
       mullvad-vpn
-      ncdu # Disk storage utility
       nerd-fonts.noto # Nerd fonts
       networkmanagerapplet # GUI for advanced network settings
-      nil # Nix language server
-      nixfmt # Nix formatter
-      nodejs # Node.js
-      eslint_d # JS/JSX linter
       obs-studio # Video recording
-      prettier # General formatter
       pamixer
       pandoc # File converter
       parted # Disk formatting
@@ -103,8 +86,6 @@ in
       popsicle # USB flasher
       postman # API testing tool
       prismlauncher # Minecraft launcher
-      ripgrep # Search tool
-      ruff # Python linter/formatter
       signal-desktop
       sl # Steam locomotive
       slack
@@ -116,22 +97,17 @@ in
       teams-for-linux
       tex-fmt # LaTeX formatter
       texliveFull # LaTeX
-      tldr # Quick manuals
-      tree-sitter # Parser generator tool
       qFlipper # Flipper Zero GUI
       qbittorrent
       qmk # Keyboard firmware
-      unzip # Unzip utility
       usbutils # USB CLI tools
-      uv # Python package manager
       v4l-utils # Video4Linux utilities
       (scaleApp vial { QT_FONT_DPI = "144"; }) # Keyboard configuration
       vlc # Media player
-      websocat # CLI for WebSockets
       waybar # Taskbar
+      websocat # CLI for WebSockets
       wev # Wayland event viewer
       wl-clipboard # Wayland clipboard CLI
-      zip # Zip file tools
       zoom-us # Zoom
 
       (python3.withPackages (
@@ -170,16 +146,6 @@ in
       (addScript "hyprland-wallpapers")
     ];
 
-    sessionVariables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-    };
-
-    shellAliases = {
-      grep = "grep --color=auto";
-      ssh = "kitten ssh"; # Fix terminfo issues when SSHing from kitty
-    };
-
     # Copy over wallpapers
     file.".local/share/wallpapers" = {
       source = ./wallpapers;
@@ -195,8 +161,6 @@ in
 
     stateVersion = "25.05";
   };
-
-  programs.bash.enable = true;
 
   services = {
     hyprpolkitagent.enable = true;
