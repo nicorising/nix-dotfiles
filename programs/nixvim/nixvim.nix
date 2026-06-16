@@ -77,6 +77,8 @@
           format_on_save.lsp_fallback = true;
 
           formatters_by_ft = {
+            c = [ "clang_format" ];
+            cpp = [ "clang_format" ];
             javascript = [
               "eslint_d"
               "prettier"
@@ -341,67 +343,67 @@
       {
         mode = "n";
         key = "<leader>1";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 1<cr>";
+        action = "<cmd>BufferLineGoToBuffer 1<cr>";
         options.desc = "Go to buffer 1";
       }
       {
         mode = "n";
         key = "<leader>2";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 2<cr>";
+        action = "<cmd>BufferLineGoToBuffer 2<cr>";
         options.desc = "Go to buffer 2";
       }
       {
         mode = "n";
         key = "<leader>3";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 3<cr>";
+        action = "<cmd>BufferLineGoToBuffer 3<cr>";
         options.desc = "Go to buffer 3";
       }
       {
         mode = "n";
         key = "<leader>4";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 4<cr>";
+        action = "<cmd>BufferLineGoToBuffer 4<cr>";
         options.desc = "Go to buffer 4";
       }
       {
         mode = "n";
         key = "<leader>5";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 5<cr>";
+        action = "<cmd>BufferLineGoToBuffer 5<cr>";
         options.desc = "Go to buffer 5";
       }
       {
         mode = "n";
         key = "<leader>6";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 6<cr>";
+        action = "<cmd>BufferLineGoToBuffer 6<cr>";
         options.desc = "Go to buffer 6";
       }
       {
         mode = "n";
         key = "<leader>7";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 7<cr>";
+        action = "<cmd>BufferLineGoToBuffer 7<cr>";
         options.desc = "Go to buffer 7";
       }
       {
         mode = "n";
         key = "<leader>8";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 8<cr>";
+        action = "<cmd>BufferLineGoToBuffer 8<cr>";
         options.desc = "Go to buffer 8";
       }
       {
         mode = "n";
         key = "<leader>9";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineGoToBuffer 9<cr>";
+        action = "<cmd>BufferLineGoToBuffer 9<cr>";
         options.desc = "Go to buffer 9";
       }
       {
         mode = "n";
         key = "<leader>,";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineMovePrev<cr>";
+        action = "<cmd>BufferLineMovePrev<cr>";
         options.desc = "Move buffer left";
       }
       {
         mode = "n";
         key = "<leader>.";
-        action = "<cmd>lua FocusEditor()<cr><cmd>BufferLineMoveNext<cr>";
+        action = "<cmd>BufferLineMoveNext<cr>";
         options.desc = "Move buffer right";
       }
 

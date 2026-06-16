@@ -65,6 +65,7 @@ in
       brightnessctl # CLI screen brightness control
       capitaine-cursors-themed # Cursor theme
       (scaleApp chirp { GDK_DPI_SCALE = "1.5"; }) # Radio programming tool
+      clang-tools # CLI tools for C/C++
       claude-code # Claude code
       clojure # Clojure
       cloudflared # Cloudflare services
@@ -75,6 +76,7 @@ in
       fd # File finder
       ffmpeg # Image processing
       gcc # Compilers
+      gnumake # Make
       hyprshot # Screenshot tool
       inotify-tools # Tools for inotify
       jq # CLI JSON processor
@@ -90,8 +92,8 @@ in
       nixfmt # Nix formatter
       nodejs # Node.js
       eslint_d # JS/JSX linter
-      prettier # General formatter
       obs-studio # Video recording
+      prettier # General formatter
       pamixer
       pandoc # File converter
       parted # Disk formatting
@@ -118,6 +120,7 @@ in
       tree-sitter # Parser generator tool
       qFlipper # Flipper Zero GUI
       qbittorrent
+      qmk # Keyboard firmware
       unzip # Unzip utility
       usbutils # USB CLI tools
       uv # Python package manager
