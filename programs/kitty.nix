@@ -1,10 +1,12 @@
+{ lib, ... }:
+
 {
   programs.kitty = {
     enable = true;
 
     font = {
       name = "NotoSansM NFM";
-      size = 10;
+      size = lib.mkDefault 10;
     };
 
     settings = {

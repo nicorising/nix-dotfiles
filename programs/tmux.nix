@@ -3,8 +3,9 @@
 {
   programs.tmux = {
     enable = true;
-    shortcut = "a";
+    shortcut = "Space";
     keyMode = "vi";
+    customPaneNavigationAndResize = true;
     mouse = true;
     terminal = "tmux-256color";
 

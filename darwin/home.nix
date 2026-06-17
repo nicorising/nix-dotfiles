@@ -13,6 +13,7 @@
       awscli2
       postgresql_16
       postman
+      ssm-session-manager-plugin
     ];
 
     file.".aerospace.toml".source = ../programs/aerospace.toml;
@@ -20,5 +21,8 @@
     stateVersion = "25.05";
   };
 
-  programs.zsh.enable = true;
+  programs = {
+    zsh.enable = true;
+    kitty.font.size = 12;
+  };
 }

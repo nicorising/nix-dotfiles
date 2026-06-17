@@ -23,7 +23,6 @@
       AppleInterfaceStyle = "Dark";
       InitialKeyRepeat = 12; # ~200ms
       KeyRepeat = 2; # ~30 Hz
-      _HIHideMenuBar = true;
     };
 
     dock.autohide = true;
