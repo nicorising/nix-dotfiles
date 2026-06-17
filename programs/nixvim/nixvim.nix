@@ -22,6 +22,7 @@
       relativenumber = true;
       clipboard = "unnamedplus";
       updatetime = 300;
+      statusline = "%<%f %h%m%r%=%{get(b:,'gitsigns_blame_line','')}  %-14.(%l,%c%V%) %P";
     };
 
     highlightOverride = {
@@ -179,7 +180,13 @@
       comment.enable = true;
 
       # Git modifications in the gutter
-      gitsigns.enable = true;
+      gitsigns = {
+        enable = true;
+        settings = {
+          current_line_blame = true;
+          current_line_blame_opts.virt_text = false; # Render in statusline instead
+        };
+      };
 
       # Image rendering
       image = {
