@@ -52,8 +52,7 @@
         ];
       };
 
-      # TODO: Replace "macbook" with the actual hostname
-      darwinConfigurations.MWX-ML-NRising = nix-darwin.lib.darwinSystem {
+      darwinConfigurations.nicoworktop = nix-darwin.lib.darwinSystem {
         modules = [
           ./darwin/configuration.nix
 

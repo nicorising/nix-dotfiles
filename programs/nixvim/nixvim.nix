@@ -183,37 +183,12 @@
         settings.backend = "kitty";
       };
 
-      # LaTeX
-      # vimtex = {
-      #   enable = true;
-      #   texlivePackage = null;
-
-      #   settings = {
-      #     view_method = "zathura";
-      #     compiler_method = "latexmk";
-      #   };
-      # };
-
       # Lua for Neovim
       lazydev.enable = true;
 
-      molten.enable = true;
-    };
-
-    extraPlugins = [
       # Python virtual environment selector
-      # (pkgs.vimUtils.buildVimPlugin {
-      # pname = "venv-selector-nvim";
-      # version = "main";
-
-      # src = pkgs.fetchFromGitHub {
-      #   owner = "linux-cultist";
-      #   repo = "venv-selector.nvim";
-      #   rev = "main";
-      #   sha256 = "+0bpYcb+sHzcxHxBLzNzeSFqk+hfkPhfmp0yxjuhbg4=";
-      # };
-      # })
-    ];
+      venv-selector.enable = true;
+    };
 
     colorschemes.gruvbox = {
       enable = true;
@@ -427,26 +402,6 @@
         key = "<leader>vs";
         action = "<cmd>VenvSelect<cr>";
         options.desc = "Select Python virtual environment";
-      }
-
-      # Molten
-      {
-        mode = "n";
-        key = "<leader>mi";
-        action = "<cmd>MoltenInit<cr>";
-        options.desc = "Initialize Molten";
-      }
-      {
-        mode = "n";
-        key = "<leader>mr";
-        action = "<cmd>MoltenEvaluateLine<cr>";
-        options.desc = "Evaluate line";
-      }
-      {
-        mode = "v";
-        key = "<leader>mr";
-        action = "<cmd>MoltenEvaluateVisual<cr>";
-        options.desc = "Evaluate selection";
       }
     ];
   };

@@ -40,6 +40,7 @@ in
     ../programs/hyprlock.nix
     ../programs/librewolf.nix
     ../programs/nh.nix
+    ../programs/nixvim/latex.nix
     ../programs/ssh.nix
     ../programs/thunderbird.nix
     ../programs/vscode.nix
@@ -118,7 +119,6 @@ in
           ipykernel # Jupyter kernel
           ipython # IPython kernel
           jupyter-client # Jupyer
-          jupytext # Jupyter to Python conversion
           keras # Keras ML API
           matplotlib # Plotting
           mypy # Static typing

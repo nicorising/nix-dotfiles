@@ -19,6 +19,7 @@
     fastfetch # System information display
     fd # File finder
     ffmpeg # Image processing
+    imagemagick # Image conversion
     jq # CLI JSON processor
     ncdu # Disk storage utility
     nil # Nix language server
