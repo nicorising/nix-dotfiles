@@ -20,6 +20,8 @@
     fastfetch # System information display
     fd # File finder
     ffmpeg # Image processing
+    gettext # Environment variable substitution in files
+    gh # GitHub CLI
     imagemagick # Image conversion
     jq # CLI JSON processor
     ncdu # Disk storage utility
@@ -40,7 +42,12 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
+    NPM_CONFIG_PREFIX = "$HOME/.npm-global"; # Save global NPM packages in the home directory
   };
+
+  home.sessionPath = [
+    "$HOME/.npm-global/bin"
+  ];
 
   home.shellAliases = {
     ls = "ls --color=auto";
