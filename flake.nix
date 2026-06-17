@@ -41,6 +41,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { flakeNixpkgs = nixpkgs; };
 
             home-manager.users.nico = {
               imports = [
@@ -61,6 +62,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { flakeNixpkgs = nixpkgs; };
 
             home-manager.users.nrising = {
               imports = [

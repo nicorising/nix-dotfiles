@@ -1,9 +1,8 @@
-{ pkgs, ... }:
+{ flakeNixpkgs, pkgs, ... }:
 
 {
   programs.nixvim = {
     enable = true;
-    nixpkgs.config.allowUnfree = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
@@ -12,6 +11,11 @@
     globals.mapleader = " ";
     diagnostic.settings.float.border = "rounded";
     extraConfigLua = builtins.readFile ./config.lua;
+
+    nixpkgs = {
+      source = flakeNixpkgs;
+      config.allowUnfree = true;
+    };
 
     opts = {
       number = true;

@@ -46,4 +46,7 @@
     grep = "grep --color=auto";
     ssh = "kitten ssh"; # Fix terminfo issues when SSHing from kitty
   };
+
+  # Fix warning regarding a reference to a store path without a proper context
+  manual.manpages.enable = false;
 }
