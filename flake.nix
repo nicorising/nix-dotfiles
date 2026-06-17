@@ -32,45 +32,39 @@
       ...
     }:
 
+    let
+      commonModule = {
+        nixpkgs.config.allowUnfree = true;
+
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          extraSpecialArgs.flakeNixpkgs = nixpkgs;
+          sharedModules = [ nixvim.homeModules.nixvim ];
+        };
+      };
+    in
     {
       nixosConfigurations.nicotop = nixpkgs.lib.nixosSystem {
         modules = [
           ./linux/configuration.nix
-
+          commonModule
           home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { flakeNixpkgs = nixpkgs; };
-
-            home-manager.users.nico = {
-              imports = [
-                ./linux/home.nix
-                nixvim.homeModules.nixvim
-              ];
-            };
-          }
+          { home-manager.users.nico.imports = [ ./linux/home.nix ]; }
         ];
       };
 
       darwinConfigurations.nicoworktop = nix-darwin.lib.darwinSystem {
         modules = [
           ./darwin/configuration.nix
-
-          mac-app-util.darwinModules.default
+          commonModule
           home-manager.darwinModules.home-manager
+          mac-app-util.darwinModules.default
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { flakeNixpkgs = nixpkgs; };
-
-            home-manager.users.nrising = {
-              imports = [
-                ./darwin/home.nix
-                mac-app-util.homeManagerModules.default
-                nixvim.homeModules.nixvim
-              ];
-            };
+            home-manager.users.nrising.imports = [
+              ./darwin/home.nix
+              mac-app-util.homeManagerModules.default
+            ];
           }
         ];
       };

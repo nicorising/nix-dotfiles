@@ -11,10 +11,7 @@
     home = "/Users/nrising";
   };
 
-  nixpkgs = {
-    hostPlatform = "aarch64-darwin";
-    config.allowUnfree = true;
-  };
+  nixpkgs.hostPlatform = "aarch64-darwin";
 
   nix.enable = false;
 
