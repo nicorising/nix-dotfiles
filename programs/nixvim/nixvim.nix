@@ -22,6 +22,7 @@
       relativenumber = true;
       clipboard = "unnamedplus";
       updatetime = 300;
+      autoread = true;
       statusline = "%<%f %h%m%r%=%{get(b:,'gitsigns_blame_line','')}  %-14.(%l,%c%V%) %P";
     };
 
@@ -184,9 +185,13 @@
         enable = true;
         settings = {
           current_line_blame = true;
-          current_line_blame_opts.virt_text = false; # Render in statusline instead
+          current_line_blame_opts.virt_text = false; # We instead render in the statusline
+          current_line_blame_opts.delay = 100;
         };
       };
+
+      # Better navigation between Neovim and tmux
+      tmux-navigator.enable = true;
 
       # Image rendering
       image = {
@@ -216,30 +221,6 @@
         key = "<leader><cr>";
         action = "i<cr><Esc>";
         options.desc = "Insert line break";
-      }
-      {
-        mode = "n";
-        key = "<C-h>";
-        action = "<C-w>h";
-        options.desc = "Move to left window";
-      }
-      {
-        mode = "n";
-        key = "<C-l>";
-        action = "<C-w>l";
-        options.desc = "Move to right window";
-      }
-      {
-        mode = "n";
-        key = "<C-j>";
-        action = "<C-w>j";
-        options.desc = "Move to lower window";
-      }
-      {
-        mode = "n";
-        key = "<C-k>";
-        action = "<C-w>k";
-        options.desc = "Move to upper window";
       }
       {
         mode = "n";
