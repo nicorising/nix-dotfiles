@@ -23,7 +23,6 @@
       clipboard = "unnamedplus";
       updatetime = 300;
       autoread = true;
-      statusline = "%<%f %h%m%r%=%{get(b:,'gitsigns_blame_line','')}  %-14.(%l,%c%V%) %P";
     };
 
     highlightOverride = {
@@ -180,14 +179,10 @@
       # Easy commenting/uncommenting
       comment.enable = true;
 
-      # Git modifications in the gutter
+      # Git QoL in Neovim
       gitsigns = {
         enable = true;
-        settings = {
-          current_line_blame = true;
-          current_line_blame_opts.virt_text = false; # We instead render in the statusline
-          current_line_blame_opts.delay = 100;
-        };
+        settings.current_line_blame = true;
       };
 
       # Better navigation between Neovim and tmux

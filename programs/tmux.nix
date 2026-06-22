@@ -3,6 +3,7 @@
 {
   programs.tmux = {
     enable = true;
+    baseIndex = 1;
     shortcut = "Space";
     keyMode = "vi";
     customPaneNavigationAndResize = true;
@@ -33,6 +34,9 @@
 
       # Automatically save/restore tmux environment
       set -g @continuum-restore 'on'
+
+      # Specific applications to resurrect
+      set -g @resurrect-processes '"~btop" "~claude" "~nvim"'
     '';
   };
 }

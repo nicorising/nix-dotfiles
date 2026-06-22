@@ -12,20 +12,20 @@ vim.keymap.set('n', 'K', function()
     vim.lsp.buf.hover({ border = 'rounded' })
 end)
 
--- Reload buffers changed on disk and refresh Neo-tree/Gitsigns
-
+-- Check for buffers changed on disk
 vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold', 'TermLeave' }, {
     callback = function()
         if vim.fn.mode() ~= 'c' and vim.fn.getcmdwintype() == '' then
             vim.cmd('checktime')
         end
-        require('neo-tree.sources.manager').refresh('filesystem')
-        vim.cmd('Gitsigns refresh')
     end,
 })
 
+-- Refresh Neo-Tree and Gitsigns and notify when the buffer was reloaded
 vim.api.nvim_create_autocmd('FileChangedShellPost', {
     callback = function()
+        require('neo-tree.sources.manager').refresh('filesystem')
+        vim.cmd('Gitsigns refresh')
         vim.notify('File changed on disk, buffer reloaded', vim.log.levels.WARN)
     end,
 })
