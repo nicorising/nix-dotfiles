@@ -3,7 +3,6 @@
 {
   programs.tmux = {
     enable = true;
-    baseIndex = 1;
     shortcut = "Space";
     keyMode = "vi";
     customPaneNavigationAndResize = true;
