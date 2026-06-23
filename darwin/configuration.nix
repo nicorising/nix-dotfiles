@@ -25,6 +25,11 @@
     dock.autohide = true;
   };
 
+  power.sleep = {
+    display = 10;
+    computer = 10;
+  };
+
   homebrew = {
     enable = true;
     taps = [

@@ -134,9 +134,30 @@
       telescope = {
         enable = true;
         extensions.fzf-native.enable = true;
-        settings.pickers.find_files = {
-          hidden = true;
-          no_ignore = true;
+        settings = {
+          pickers.find_files = {
+            hidden = true;
+            no_ignore = true;
+          };
+
+          defaults.file_ignore_patterns = [
+            "^__pycache__/"
+            "/__pycache__/"
+            "^%.git/"
+            "/%.git/"
+            "^%.mypy_cache/"
+            "/%.mypy_cache/"
+            "^%.ruff_cache/"
+            "/%.ruff_cache/"
+            "^%.venv/"
+            "/%.venv/"
+            "^build/"
+            "/build/"
+            "^dist/"
+            "/dist/"
+            "^node_modules/"
+            "/node_modules/"
+          ];
         };
       };
 
