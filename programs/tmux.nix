@@ -14,7 +14,10 @@
       gruvbox
       vim-tmux-navigator
       resurrect
-      continuum
+      {
+        plugin = continuum;
+        extraConfig = "set -g @continuum-restore 'on'";
+      }
     ];
 
     extraConfig = ''
@@ -32,11 +35,8 @@
       bind | split-window -h -c "#{pane_current_path}"
       bind - split-window -v -c "#{pane_current_path}"
 
-      # Automatically save/restore tmux environment
-      set -g @continuum-restore 'on'
-
       # Specific applications to resurrect
-      set -g @resurrect-processes '"~btop" "~claude" "~nvim"'
+      set -g @resurrect-processes '"~btop" "~claude" "~nvim->nvim ."'
     '';
   };
 }
