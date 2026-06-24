@@ -156,22 +156,6 @@
         };
       };
 
-      # Buffers as tabs
-      bufferline = {
-        enable = true;
-
-        settings.options = {
-          numbers = "ordinal";
-          diagnostics = "nvim_lsp";
-
-          offsets = [
-            {
-              filetype = "neo-tree";
-            }
-          ];
-        };
-      };
-
       # Easy commenting/uncommenting
       comment.enable = true;
 
@@ -243,6 +227,12 @@
       }
       {
         mode = "n";
+        key = "<leader>fb";
+        action = "<cmd>Telescope buffers<cr>";
+        options.desc = "Open buffers";
+      }
+      {
+        mode = "n";
         key = "<leader>fr";
         action = "<cmd>Telescope oldfiles<cr>";
         options.desc = "Recent files";
@@ -295,74 +285,6 @@
         key = "R";
         action = "<cmd>lua require('flash').treesitter_search()<cr>";
         options.desc = "Treesitter search";
-      }
-
-      # Buffers
-      {
-        mode = "n";
-        key = "<leader>1";
-        action = "<cmd>BufferLineGoToBuffer 1<cr>";
-        options.desc = "Go to buffer 1";
-      }
-      {
-        mode = "n";
-        key = "<leader>2";
-        action = "<cmd>BufferLineGoToBuffer 2<cr>";
-        options.desc = "Go to buffer 2";
-      }
-      {
-        mode = "n";
-        key = "<leader>3";
-        action = "<cmd>BufferLineGoToBuffer 3<cr>";
-        options.desc = "Go to buffer 3";
-      }
-      {
-        mode = "n";
-        key = "<leader>4";
-        action = "<cmd>BufferLineGoToBuffer 4<cr>";
-        options.desc = "Go to buffer 4";
-      }
-      {
-        mode = "n";
-        key = "<leader>5";
-        action = "<cmd>BufferLineGoToBuffer 5<cr>";
-        options.desc = "Go to buffer 5";
-      }
-      {
-        mode = "n";
-        key = "<leader>6";
-        action = "<cmd>BufferLineGoToBuffer 6<cr>";
-        options.desc = "Go to buffer 6";
-      }
-      {
-        mode = "n";
-        key = "<leader>7";
-        action = "<cmd>BufferLineGoToBuffer 7<cr>";
-        options.desc = "Go to buffer 7";
-      }
-      {
-        mode = "n";
-        key = "<leader>8";
-        action = "<cmd>BufferLineGoToBuffer 8<cr>";
-        options.desc = "Go to buffer 8";
-      }
-      {
-        mode = "n";
-        key = "<leader>9";
-        action = "<cmd>BufferLineGoToBuffer 9<cr>";
-        options.desc = "Go to buffer 9";
-      }
-      {
-        mode = "n";
-        key = "<leader>,";
-        action = "<cmd>BufferLineMovePrev<cr>";
-        options.desc = "Move buffer left";
-      }
-      {
-        mode = "n";
-        key = "<leader>.";
-        action = "<cmd>BufferLineMoveNext<cr>";
-        options.desc = "Move buffer right";
       }
 
       # Git

@@ -14,7 +14,9 @@
       alias = {
         lg = "log --graph --oneline --all";
         pfwl = "push --force-with-lease";
-        history = ''
+
+        # List last 10 branches
+        h = ''
           !f() {
             i=0
             while [ $i -lt 10 ]; do
