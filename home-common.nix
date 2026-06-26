@@ -12,6 +12,7 @@
     programs/nixvim/nixvim.nix
     programs/ranger.nix
     programs/tmux.nix
+    programs/zoxide.nix
   ];
 
   home.packages = with pkgs; [
