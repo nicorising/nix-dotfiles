@@ -228,7 +228,7 @@
       {
         mode = "n";
         key = "<leader>fb";
-        action = "<cmd>Telescope buffers<cr>";
+        action = "<cmd>Telescope buffers sort_mru=true<cr>";
         options.desc = "Open buffers";
       }
       {
@@ -236,6 +236,18 @@
         key = "<leader>fr";
         action = "<cmd>Telescope oldfiles<cr>";
         options.desc = "Recent files";
+      }
+      {
+        mode = "n";
+        key = "<leader>fc";
+        action = "<cmd>Telescope git_status<cr>";
+        options.desc = "Changed files (git)";
+      }
+      {
+        mode = "n";
+        key = "<leader>gl";
+        action = "<cmd>Telescope git_commits<cr>";
+        options.desc = "Git commits";
       }
       {
         mode = "n";

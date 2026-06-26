@@ -27,7 +27,7 @@
       set -gq allow-passthrough on
       set -g visual-activity off
 
-      # Forward terminal focus events to running programs (e.g., so they can repaint)
+      # Forward terminal focus events to running programs
       set -g focus-events on
 
       # Better pane splitting
