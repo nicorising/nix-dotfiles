@@ -11,6 +11,7 @@
     programs/kitty.nix
     programs/nixvim/nixvim.nix
     programs/ranger.nix
+    programs/starship.nix
     programs/tmux.nix
     programs/zoxide.nix
   ];
