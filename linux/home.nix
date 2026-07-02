@@ -43,7 +43,6 @@ in
     ../programs/nixvim/latex.nix
     ../programs/ssh.nix
     ../programs/thunderbird.nix
-    ../programs/vscode.nix
     ../programs/waybar/waybar.nix
     ../programs/zathura.nix
   ];
