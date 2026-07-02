@@ -86,6 +86,7 @@
           format_on_save.lsp_fallback = true;
 
           formatters_by_ft = {
+            arduino = [ "clang_format" ];
             c = [ "clang_format" ];
             cpp = [ "clang_format" ];
             javascript = [
