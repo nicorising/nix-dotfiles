@@ -122,7 +122,7 @@
         "super shift, 9, movetoworkspacesilent, 9"
         "super shift, 0, movetoworkspacesilent, 10"
 
-        ", print, exec, hyprshot -m region"
+        ", print, exec, hyprshot -m region -o ~/pictures/screenshots"
       ];
 
       binde = [
