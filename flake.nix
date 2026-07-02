@@ -34,7 +34,12 @@
 
     let
       commonModule = {
-        nixpkgs.config.allowUnfree = true;
+        nixpkgs.config = {
+          allowUnfree = true;
+
+          # TODO: Remove once no longer needed
+          permittedInsecurePackages = [ "electron-39.8.10" ];
+        };
 
         home-manager = {
           useGlobalPkgs = true;
