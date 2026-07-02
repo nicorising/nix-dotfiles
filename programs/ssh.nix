@@ -2,26 +2,26 @@
   programs.ssh = {
     enable = true;
 
-    matchBlocks = {
+    settings = {
       "nicorising.com" = {
-        hostname = "nicorising.com";
-        user = "nico";
-        identityFile = "~/.ssh/nicorising_ed25519";
-        identitiesOnly = true;
+        HostName = "nicorising.com";
+        User = "nico";
+        IdentityFile = "~/.ssh/nicorising_ed25519";
+        IdentitiesOnly = true;
       };
 
       "github.com" = {
-        hostname = "github.com";
-        user = "git";
-        identityFile = "~/.ssh/github_ed25519";
-        identitiesOnly = true;
+        HostName = "github.com";
+        User = "git";
+        IdentityFile = "~/.ssh/github_ed25519";
+        IdentitiesOnly = true;
       };
 
       "gitlab.com" = {
-        hostname = "gitlab.com";
-        user = "git";
-        identityFile = "~/.ssh/gitlab_ed25519";
-        identitiesOnly = true;
+        HostName = "gitlab.com";
+        User = "git";
+        IdentityFile = "~/.ssh/gitlab_ed25519";
+        IdentitiesOnly = true;
       };
     };
 
