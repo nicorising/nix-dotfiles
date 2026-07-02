@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   addScript = name: pkgs.writeShellScriptBin name (builtins.readFile ./scripts/${name}.sh);
@@ -220,4 +220,25 @@ in
   };
 
   programs.bash.enable = true;
+
+  # Map XDG user dirs to a lowercase layout. createDirectories = false, so
+  # these only pin the naming in ~/.config/user-dirs.dirs; folders are created
+  # on demand (e.g. hyprshot mkdir -p's ~/pictures/screenshots itself).
+  xdg.userDirs =
+    let
+      home = config.home.homeDirectory;
+    in
+    {
+      enable = true;
+      createDirectories = false;
+
+      desktop = "${home}/desktop";
+      documents = "${home}/documents";
+      download = "${home}/downloads";
+      music = "${home}/music";
+      pictures = "${home}/pictures";
+      publicShare = "${home}/public";
+      templates = "${home}/templates";
+      videos = "${home}/videos";
+    };
 }
