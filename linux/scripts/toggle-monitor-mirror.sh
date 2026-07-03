@@ -14,17 +14,22 @@ if [ "${#externals[@]}" -eq 0 ]; then
 fi
 
 if [ -f "$state_file" ]; then
+    rm -f "$state_file"
+
     for m in "${externals[@]}"; do
         hyprctl keyword monitor "$m, preferred, auto, 1"
     done
-    rm -f "$state_file"
+
+    # Make sure to give workspace 10 back to the external monitor
+    hyprctl dispatch moveworkspacetomonitor 10 "${externals[0]}"
 
     notify-send "Monitors" "Extending display"
 else
+    touch "$state_file"
+
     for m in "${externals[@]}"; do
         hyprctl keyword monitor "$m, preferred, auto, 1, mirror, $internal"
     done
-    touch "$state_file"
 
     notify-send "Monitors" "Mirroring display"
 fi

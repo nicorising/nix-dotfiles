@@ -9,6 +9,7 @@
         "hyprctl setcursor 'Capitaine Cursors (Gruvbox)' 24"
         "hyprland-wallpapers"
         "waybar"
+        "external-monitor-daemon"
       ];
 
       general = {

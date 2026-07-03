@@ -143,6 +143,7 @@ in
 
       # Add custom scripts
       (addScript "bluetooth-menu")
+      (addScript "external-monitor-daemon")
       (addScript "hyprland-wallpapers")
       (addScript "toggle-monitor-mirror")
     ];
