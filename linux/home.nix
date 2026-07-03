@@ -144,6 +144,7 @@ in
       # Add custom scripts
       (addScript "bluetooth-menu")
       (addScript "hyprland-wallpapers")
+      (addScript "toggle-monitor-mirror")
     ];
 
     # Copy over wallpapers

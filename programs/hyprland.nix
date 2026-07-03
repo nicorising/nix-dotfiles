@@ -75,7 +75,7 @@
 
       monitor = [
         "eDP-1, preferred, auto, 1.666"
-        "DP-2, preferred, auto, 1, mirror, eDP-1"
+        ", preferred, auto, 1"
       ];
 
       bind = [
@@ -87,7 +87,8 @@
         "super, space, exec, fuzzel"
         "super, q, killactive"
         "super, f, togglefloating"
-        "super, p, pseudo"
+        "super, o, pseudo"
+        "super, p, exec, toggle-monitor-mirror" # The Framework display key (F9) sends super + p
         ", XF86AudioMedia, exec, loginctl lock-session" # The Framework logo key (F12)
 
         "super, l, movefocus, r"
