@@ -89,6 +89,10 @@
             arduino = [ "clang_format" ];
             c = [ "clang_format" ];
             cpp = [ "clang_format" ];
+            css = [ "prettier" ];
+            graphql = [ "prettier" ];
+            handlebars = [ "prettier" ];
+            html = [ "prettier" ];
             javascript = [
               "eslint_d"
               "prettier"
@@ -97,11 +101,19 @@
               "eslint_d"
               "prettier"
             ];
+            json = [ "prettier" ];
+            json5 = [ "prettier" ];
+            jsonc = [ "prettier" ];
+            less = [ "prettier" ];
+            markdown = [ "prettier" ];
+            "markdown.mdx" = [ "prettier" ];
             nix = [ "nixfmt" ];
             python = [
               "ruff_fix"
               "ruff_format"
             ];
+            scss = [ "prettier" ];
+            sh = [ "shfmt" ];
             tex = [ "tex-fmt" ];
             typescript = [
               "eslint_d"
@@ -111,7 +123,8 @@
               "eslint_d"
               "prettier"
             ];
-            "_" = [ "prettier" ];
+            vue = [ "prettier" ];
+            yaml = [ "prettier" ];
           };
         };
       };

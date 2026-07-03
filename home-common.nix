@@ -35,6 +35,7 @@
     prettier # General formatter
     ripgrep # Search tool
     ruff # Python linter/formatter
+    shfmt # Shell formatter
     tldr # Quick manuals
     tree-sitter # Parser generator tool
     unzip # Unzip utility
