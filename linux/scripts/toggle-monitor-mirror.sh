@@ -3,8 +3,10 @@
 internal="eDP-1"
 state_file="${XDG_RUNTIME_DIR:-/tmp}/hypr-monitor-mirror"
 
-# Every connected output that isn't the internal panel.
-mapfile -t externals < <(hyprctl monitors -j | jq -r --arg i "$internal" '.[] | select(.name != $i) | .name')
+mapfile -t externals < <(
+    hyprctl monitors all -j |
+        jq -r --arg i "$internal" '.[] | select(.name != $i) | .name'
+)
 
 if [ "${#externals[@]}" -eq 0 ]; then
     notify-send "Monitors" "No external display connected"
