@@ -231,6 +231,7 @@ in
     {
       enable = true;
       createDirectories = false;
+      setSessionVariables = true;
 
       desktop = "${home}/desktop";
       documents = "${home}/documents";
