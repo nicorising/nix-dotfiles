@@ -20,9 +20,6 @@ if [ -f "$state_file" ]; then
         hyprctl keyword monitor "$m, preferred, auto, 1"
     done
 
-    # Make sure to give workspace 10 back to the external monitor
-    hyprctl dispatch moveworkspacetomonitor 10 "${externals[0]}"
-
     notify-send "Monitors" "Extending display"
 else
     touch "$state_file"
