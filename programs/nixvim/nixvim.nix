@@ -51,7 +51,10 @@
           };
           pyright.enable = true;
           ruff.enable = true;
-          tailwindcss.enable = true;
+          tailwindcss = {
+            enable = true;
+            settings.tailwindCSS.colorDecorators = false;
+          };
           texlab.enable = true;
           ts_ls.enable = true;
         };
