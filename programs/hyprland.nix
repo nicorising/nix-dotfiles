@@ -83,7 +83,6 @@
         "super, r, exec, ranger"
         "super, w, exec, librewolf"
         "super, s, exec, signal-desktop"
-        "super, b, exec, kitty --class floating -e sh -c btop"
         "super, space, exec, fuzzel"
         "super, q, killactive"
         "super, f, togglefloating"
