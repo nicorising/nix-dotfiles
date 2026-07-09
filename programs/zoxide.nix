@@ -1,8 +1,22 @@
-{
-  programs.zoxide = {
-    enable = true;
+{ config, lib, ... }:
 
-    # Replace cd with zoxide in the shell
-    options = [ "--cmd cd" ];
+let
+  # Replace cd with zoxide, but not for Claude Code
+  aliasCd = shell: ''
+    if [[ -z "$CLAUDECODE" ]]; then
+      eval "$(${lib.getExe config.programs.zoxide.package} init ${shell} --cmd cd)"
+    fi
+  '';
+in
+{
+  programs = {
+    zoxide = {
+      enable = true;
+      enableBashIntegration = false;
+      enableZshIntegration = false;
+    };
+
+    bash.initExtra = aliasCd "bash";
+    zsh.initContent = aliasCd "zsh";
   };
 }
