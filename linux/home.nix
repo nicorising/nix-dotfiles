@@ -54,6 +54,7 @@ in
     packages = with pkgs; [
       alsa-utils # Advanced Linux Sound Architecture
       arduino # Electronics prototyping
+      awww # Wallpaper manager
       bitwarden-desktop # Password manager
       bluez
       bluez-tools
@@ -82,11 +83,11 @@ in
       pandoc # File converter
       parted # Disk formatting
       pavucontrol
-      pgadmin4-desktopmode # PostgreSQL GUI
       playerctl # CLI media player control
       popsicle # USB flasher
       postman # API testing tool
       prismlauncher # Minecraft launcher
+      rainfrog # PostgreSQL TUI
       signal-desktop
       sl # Steam locomotive
       slack
@@ -94,7 +95,6 @@ in
       spotify # Spotify
       steam # Steam
       super-slicer-beta # 3D printing
-      awww # Wallpaper manager
       teams-for-linux
       tex-fmt # LaTeX formatter
       texliveFull # LaTeX
