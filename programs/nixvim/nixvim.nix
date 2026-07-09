@@ -218,6 +218,12 @@
     keymaps = [
       {
         mode = "n";
+        key = "<Esc>";
+        action = "<cmd>nohlsearch<cr>";
+        options.desc = "Clear search highlight";
+      }
+      {
+        mode = "n";
         key = "<leader><cr>";
         action = "i<cr><Esc>";
         options.desc = "Insert line break";
