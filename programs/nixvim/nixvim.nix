@@ -188,7 +188,15 @@
       # Image rendering
       image = {
         enable = true;
-        settings.backend = "kitty";
+        settings = {
+          backend = "kitty";
+          tmux_show_only_in_active_window = true;
+
+          integrations.markdown = {
+            only_render_image_at_cursor = true;
+            only_render_image_at_cursor_mode = "inline";
+          };
+        };
       };
 
       # Lua for Neovim
