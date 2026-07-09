@@ -13,8 +13,8 @@
 
       general = {
         border_size = 1;
-        gaps_in = 8;
-        gaps_out = 16;
+        gaps_in = 4;
+        gaps_out = 8;
         resize_on_border = true;
         "col.active_border" = "rgb(83a598)";
         "col.inactive_border" = "rgb(3c3836)";
