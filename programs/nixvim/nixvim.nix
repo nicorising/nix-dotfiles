@@ -55,6 +55,7 @@
             enable = true;
             settings.tailwindCSS.colorDecorators = false;
           };
+          terraformls.enable = true;
           texlab.enable = true;
           ts_ls.enable = true;
         };
@@ -117,6 +118,8 @@
             ];
             scss = [ "prettier" ];
             sh = [ "shfmt" ];
+            terraform = [ "terraform_fmt" ];
+            "terraform-vars" = [ "terraform_fmt" ];
             tex = [ "tex-fmt" ];
             typescript = [
               "eslint_d"

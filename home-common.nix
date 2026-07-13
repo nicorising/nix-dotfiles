@@ -7,7 +7,6 @@
   imports = [
     programs/btop.nix
     programs/direnv.nix
-    programs/fzf.nix
     programs/git.nix
     programs/kitty.nix
     programs/nixvim/nixvim.nix
@@ -36,6 +35,7 @@
     ripgrep # Search tool
     ruff # Python linter/formatter
     shfmt # Shell formatter
+    terraform # Infrastructure-as-code tool
     tldr # Quick manuals
     tree-sitter # Parser generator tool
     unzip # Unzip utility
@@ -57,6 +57,10 @@
   home.shellAliases = {
     ls = "ls --color=auto";
     grep = "grep --color=auto";
+  };
+
+  programs = {
+    fzf.enable = true;
   };
 
   # Fix warning regarding a reference to a store path without a proper context
