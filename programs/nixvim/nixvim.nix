@@ -49,7 +49,6 @@
             enable = true;
             settings.nix.flake.autoArchive = true; # Auto-fetch flake inputs
           };
-          pyright.enable = true;
           ruff.enable = true;
           tailwindcss = {
             enable = true;
@@ -58,6 +57,7 @@
           terraformls.enable = true;
           texlab.enable = true;
           ts_ls.enable = true;
+          ty.enable = true;
         };
 
         keymaps = {
