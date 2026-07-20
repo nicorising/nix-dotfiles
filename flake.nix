@@ -20,6 +20,12 @@
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Git worktree manager
+    treehouse = {
+      url = "github:kunchenguid/treehouse";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -29,16 +35,25 @@
       nixpkgs,
       nixvim,
       nix-darwin,
+      treehouse,
       ...
     }:
 
     let
       commonModule = {
-        nixpkgs.config = {
-          allowUnfree = true;
+        nixpkgs = {
+          config = {
+            allowUnfree = true;
 
-          # TODO: Remove once no longer needed
-          permittedInsecurePackages = [ "electron-39.8.10" ];
+            # TODO: Remove once no longer needed
+            permittedInsecurePackages = [ "electron-39.8.10" ];
+          };
+
+          overlays = [
+            (final: prev: {
+              treehouse = treehouse.packages.${prev.stdenv.hostPlatform.system}.default;
+            })
+          ];
         };
 
         home-manager = {

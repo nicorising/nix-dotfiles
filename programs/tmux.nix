@@ -20,8 +20,8 @@
     ];
 
     extraConfig = ''
-      # Pass truecolor through tmux
-      set -as terminal-features ",*:RGB"
+      # Pass truecolor and hyperlinks through tmux
+      set -as terminal-features ",*:RGB:hyperlinks"
 
       # Let image.nvim's kitty graphics escapes pass through tmux to kitty
       set -gq allow-passthrough on
