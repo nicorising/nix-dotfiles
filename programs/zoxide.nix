@@ -16,7 +16,8 @@ in
       enableZshIntegration = false;
     };
 
-    bash.initExtra = aliasCd "bash";
-    zsh.initContent = aliasCd "zsh";
+    # Make sure zoxide appears in the config files last
+    bash.initExtra = lib.mkOrder 2000 (aliasCd "bash");
+    zsh.initContent = lib.mkOrder 2000 (aliasCd "zsh");
   };
 }
