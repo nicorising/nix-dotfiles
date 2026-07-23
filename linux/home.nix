@@ -119,6 +119,7 @@ in
           ipython # IPython kernel
           jupyter-client # Jupyer
           keras # Keras ML API
+          keymap-drawer # Keymap visualizer
           matplotlib # Plotting
           mypy # Static typing
           nbformat # Notebook format support
