@@ -11,7 +11,15 @@
 
     plugins = with pkgs.tmuxPlugins; [
       gruvbox
-      vim-tmux-navigator
+      {
+        plugin = vim-tmux-navigator;
+        extraConfig = ''
+          set -g @vim_navigator_mapping_left  'C-h C-Left'
+          set -g @vim_navigator_mapping_down  'C-j C-Down'
+          set -g @vim_navigator_mapping_up    'C-k C-Up'
+          set -g @vim_navigator_mapping_right 'C-l C-Right'
+        '';
+      }
       resurrect
       {
         plugin = continuum;
@@ -33,6 +41,12 @@
       # Better pane splitting
       bind | split-window -h -c "#{pane_current_path}"
       bind - split-window -v -c "#{pane_current_path}"
+
+      # Resize panes with prefix + arrows
+      bind -r Left  resize-pane -L 5
+      bind -r Down  resize-pane -D 5
+      bind -r Up    resize-pane -U 5
+      bind -r Right resize-pane -R 5
 
       # Specific applications to resurrect
       set -g @resurrect-processes '"~btop" "~claude" "~nvim->nvim ."'

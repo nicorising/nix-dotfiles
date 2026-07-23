@@ -238,6 +238,32 @@
         options.desc = "Code actions";
       }
 
+      # Ctrl + arrow split/pane navigation
+      {
+        mode = "n";
+        key = "<C-Left>";
+        action = "<cmd>TmuxNavigateLeft<cr>";
+        options.desc = "Navigate to left split/pane";
+      }
+      {
+        mode = "n";
+        key = "<C-Down>";
+        action = "<cmd>TmuxNavigateDown<cr>";
+        options.desc = "Navigate to below split/pane";
+      }
+      {
+        mode = "n";
+        key = "<C-Up>";
+        action = "<cmd>TmuxNavigateUp<cr>";
+        options.desc = "Navigate to above split/pane";
+      }
+      {
+        mode = "n";
+        key = "<C-Right>";
+        action = "<cmd>TmuxNavigateRight<cr>";
+        options.desc = "Navigate to right split/pane";
+      }
+
       # Neo-tree
       {
         mode = "n";
