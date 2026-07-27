@@ -12,7 +12,7 @@
       };
 
       alias = {
-        lg = "log --graph --oneline --all";
+        lg = "log --graph --oneline";
         pfwl = "push --force-with-lease";
 
         # List last 10 branches
