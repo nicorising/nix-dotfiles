@@ -83,6 +83,7 @@ in
       pandoc # File converter
       parted # Disk formatting
       pavucontrol
+      platformio # IoT development
       playerctl # CLI media player control
       popsicle # USB flasher
       postman # API testing tool
