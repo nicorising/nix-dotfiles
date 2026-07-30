@@ -202,6 +202,9 @@
         };
       };
 
+      # Markdown rendering
+      render-markdown.enable = true;
+
       # Lua for Neovim
       lazydev.enable = true;
 
