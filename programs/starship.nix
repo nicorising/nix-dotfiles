@@ -10,6 +10,7 @@
         when = ''[ -n "$TREEHOUSE_DIR" ]'';
         command = ''basename "$(dirname "$TREEHOUSE_DIR")"'';
         symbol = "🌳 ";
+        format = "in [$symbol$output]($style) ";
         shell = [ "sh" ];
       };
     };

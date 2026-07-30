@@ -13,6 +13,7 @@
     programs/ranger.nix
     programs/starship.nix
     programs/tmux.nix
+    programs/treehouse/treehouse.nix
     programs/zoxide.nix
   ];
 
