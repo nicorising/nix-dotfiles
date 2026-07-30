@@ -20,6 +20,8 @@
     opts = {
       number = true;
       relativenumber = true;
+      linebreak = true;
+      breakindent = true;
       clipboard = "unnamedplus";
       updatetime = 300;
       autoread = true;
@@ -233,6 +235,56 @@
         key = "<leader><cr>";
         action = "i<cr><Esc>";
         options.desc = "Insert line break";
+      }
+
+      # Move by display line (unless a count is given)
+      {
+        mode = [
+          "n"
+          "x"
+        ];
+        key = "j";
+        action = "v:count == 0 ? 'gj' : 'j'";
+        options = {
+          expr = true;
+          desc = "Down by display line";
+        };
+      }
+      {
+        mode = [
+          "n"
+          "x"
+        ];
+        key = "k";
+        action = "v:count == 0 ? 'gk' : 'k'";
+        options = {
+          expr = true;
+          desc = "Up by display line";
+        };
+      }
+      {
+        mode = [
+          "n"
+          "x"
+        ];
+        key = "<Down>";
+        action = "v:count == 0 ? 'gj' : 'j'";
+        options = {
+          expr = true;
+          desc = "Down by display line";
+        };
+      }
+      {
+        mode = [
+          "n"
+          "x"
+        ];
+        key = "<Up>";
+        action = "v:count == 0 ? 'gk' : 'k'";
+        options = {
+          expr = true;
+          desc = "Up by display line";
+        };
       }
       {
         mode = "n";
