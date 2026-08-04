@@ -46,6 +46,7 @@
         servers = {
           clojure_lsp.enable = true;
           eslint.enable = true;
+          harper_ls.enable = true;
           lua_ls.enable = true;
           nil_ls = {
             enable = true;
