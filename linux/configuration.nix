@@ -96,6 +96,7 @@
   # USB devices
   services.udev = {
     packages = with pkgs; [
+      platformio-core
       qmk
       vial
     ];
