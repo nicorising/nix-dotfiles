@@ -78,6 +78,7 @@ in
       nerd-fonts.noto # Nerd fonts
       networkmanagerapplet # GUI for advanced network settings
       obs-studio # Video recording
+      opentofu # Infrastructure as code
       pamixer
       pandoc # File converter
       parted # Disk formatting
