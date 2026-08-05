@@ -46,7 +46,6 @@
         servers = {
           clojure_lsp.enable = true;
           eslint.enable = true;
-          harper_ls.enable = true;
           lua_ls.enable = true;
           nil_ls = {
             enable = true;
@@ -74,9 +73,9 @@
       treesitter = {
         enable = true;
         # TODO: Restore allGrammars once nixpkgs ships a diff parser matching its queries
-        grammarPackages = builtins.filter
-          (g: !(pkgs.lib.hasInfix "diff" g.name))
-          pkgs.vimPlugins.nvim-treesitter.allGrammars;
+        grammarPackages = builtins.filter (
+          g: !(pkgs.lib.hasInfix "diff" g.name)
+        ) pkgs.vimPlugins.nvim-treesitter.allGrammars;
 
         highlight.enable = true;
         indent.enable = true;
