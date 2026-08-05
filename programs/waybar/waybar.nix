@@ -1,3 +1,6 @@
+let
+  iconSize = "12";
+in
 {
   programs.waybar = {
     enable = true;
@@ -43,7 +46,7 @@
           exec-if = "pgrep spotify && [ \"$(playerctl -p spotify status 2>/dev/null)\" = \"Playing\" ]";
           interval = 1;
 
-          format = ''<span font="12" color="#83a598">󰝚</span>  {}'';
+          format = ''<span font="${iconSize}" color="#83a598">󰝚</span> {}'';
           max-length = 50;
           escape = true;
 
@@ -53,9 +56,9 @@
         };
 
         bluetooth = {
-          format = "<span font='12' color='#83a598'>󰂯</span>";
-          format-connected = "<span font='12' color='#83a598'>󰂱</span>";
-          format-disabled = "<span font='12' color='#928374'>󰂲</span>";
+          format = "<span font='${iconSize}' color='#83a598'>󰂯</span>";
+          format-connected = "<span font='${iconSize}' color='#83a598'>󰂱</span>";
+          format-disabled = "<span font='${iconSize}' color='#928374'>󰂲</span>";
           tooltip-format = "{controller_alias}\t{controller_address}";
           tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
@@ -77,8 +80,8 @@
         };
 
         pulseaudio = {
-          format = ''<span font="12" color="#b8bb26">{icon}</span>  {volume}%'';
-          format-muted = ''<span font="12" color="#b8bb26">󰸈</span>  {volume}%'';
+          format = ''<span font="${iconSize}" color="#b8bb26">{icon}</span> {volume}%'';
+          format-muted = ''<span font="${iconSize}" color="#b8bb26">󰸈</span> {volume}%'';
           format-icons = {
             default = [
               "󰕿"
@@ -100,7 +103,7 @@
         };
 
         backlight = {
-          format = ''<span font="11" color="#fabd2f">{icon}</span>  {percent}%'';
+          format = ''<span font="${iconSize}" color="#fabd2f">{icon}</span> {percent}%'';
           format-icons = [
             "󰛩"
             "󱩎"
@@ -128,10 +131,10 @@
             critical = 10;
           };
           interval = 1;
-          format = ''<span font="11" color="#8ec07c">{icon}</span>  {capacity}%'';
-          format-charging = ''<span font="11" color="#8ec07c">{icon}</span>  {capacity}%'';
-          format-warning = ''<span font="11" color="#fabd2f">{icon}</span>  {capacity}%'';
-          format-critical = ''<span font="11" color="#fb4934">{icon}</span>  {capacity}%'';
+          format = ''<span font="${iconSize}" color="#8ec07c">{icon}</span> {capacity}%'';
+          format-charging = ''<span font="${iconSize}" color="#8ec07c">{icon}</span> {capacity}%'';
+          format-warning = ''<span font="${iconSize}" color="#fabd2f">{icon}</span> {capacity}%'';
+          format-critical = ''<span font="${iconSize}" color="#fb4934">{icon}</span> {capacity}%'';
           format-icons = [
             "󰁺"
             "󰁻"
@@ -148,8 +151,8 @@
 
         clock = {
           interval = 1;
-          format = ''<span font="11" color="#fe8019">󱑍</span>  {:%H:%M}'';
-          format-alt = ''<span font="11" color="#fe8019">󱑍</span>  {:%m-%d-%Y %H:%M:%S}'';
+          format = ''<span font="${iconSize}" color="#fe8019">󱑍</span> {:%H:%M}'';
+          format-alt = ''<span font="${iconSize}" color="#fe8019">󱑍</span> {:%m-%d-%Y %H:%M:%S}'';
           tooltip-format = "<tt><small>{calendar}</small></tt>";
           calendar = {
             mode = "month";
