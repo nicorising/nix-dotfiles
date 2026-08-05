@@ -36,7 +36,7 @@ in
 
     ../programs/fuzzel.nix
     ../programs/hypridle.nix
-    ../programs/hyprland.nix
+    ../programs/hyprland/hyprland.nix
     ../programs/hyprlock.nix
     ../programs/librewolf.nix
     ../programs/nh.nix
