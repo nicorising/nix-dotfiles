@@ -20,8 +20,10 @@
 @define-color orange-dark #d65d0e;
 
 #waybar {
-    color: @fg;
-    background: alpha(@bg, 0.9);
+  color: @fg;
+  background: alpha(@bg, 0.9);
+  font-family: "NotoSansM NFP";
+  font-size: 12pt;
 }
 
 #pulseaudio,
@@ -30,66 +32,66 @@
 #bluetooth,
 #network,
 #clock {
-    padding: 0 8px;
+  padding: 0 8px;
 }
 
 #power-menu {
-    padding: 0 6px 0 2px;
+  padding: 0 6px 0 2px;
 }
 
 #workspaces button {
-    min-width: 12px;
-    border: none;
-    border-radius: 0;
-    font-size: 16px;
-    color: @green;
+  min-width: 12px;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  color: @green;
 }
 
 #workspaces button.urgent {
-    color: @red;
+  color: @red;
 }
 
 #workspaces button.empty {
-    color: @fg;
+  color: @fg;
 }
 
 #workspaces button.active {
-    color: @yellow;
-    background: alpha(@bg-light, 0.9);
+  color: @yellow;
+  background: alpha(@bg-light, 0.9);
 }
 
 #workspaces button:hover {
-    background: alpha(@bg-light, 0.9);
+  background: alpha(@bg-light, 0.9);
 }
 
 #network {
-    color: @purple;
+  color: @purple;
 }
 
 #custom-tray-icon,
 #tray {
-    padding: 0 6px;
+  padding: 0 6px;
 }
 
 #custom-tray-icon {
-    color: @fg
+  color: @fg;
 }
 
 #custom-power,
 #custom-lock,
 #custom-reboot {
-    padding: 0 6px;
+  padding: 0 6px;
 }
 
 #custom-power {
-    color: @red;
+  color: @red;
 }
 
 #custom-lock {
-    color: @green;
+  color: @green;
 }
 
 #custom-reboot {
-    color: @purple;
-    font-size: larger;
+  color: @purple;
+  font-size: larger;
 }

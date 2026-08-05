@@ -207,6 +207,11 @@ in
   gtk = {
     enable = true;
 
+    font = {
+      name = "Sans";
+      size = 11;
+    };
+
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
     };
