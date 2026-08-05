@@ -75,7 +75,6 @@ in
       killall # Process killing command
       libnotify # Notification sender
       libreoffice
-      mullvad-vpn
       nerd-fonts.noto # Nerd fonts
       networkmanagerapplet # GUI for advanced network settings
       obs-studio # Video recording
@@ -119,8 +118,6 @@ in
           ipykernel # Jupyter kernel
           ipython # IPython kernel
           jupyter-client # Jupyer
-          keras # Keras ML API
-          keymap-drawer # Keymap visualizer
           matplotlib # Plotting
           mypy # Static typing
           nbformat # Notebook format support
@@ -131,15 +128,11 @@ in
           pillow # Image processing
           pyarrow # Data processing
           pynvim # Python in Neovim
-          tensorflow # Machine learning
-          torch # PyTorch
-          transformers # Transformer models
           scikit-learn # Scikit learn
           seaborn # Data visualization
           spacy # Natural language toolkit
           spacy-models.en_core_web_sm # Spacy English model
           statsmodels # Statistical models
-          ultralytics # YOLO models
         ]
       ))
 

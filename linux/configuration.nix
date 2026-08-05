@@ -37,8 +37,10 @@
     };
   };
 
-  services.mullvad-vpn.enable = true;
-  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+  services.mullvad-vpn = {
+    enable = true;
+    gui.enable = true;
+  };
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
