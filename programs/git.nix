@@ -6,6 +6,7 @@
     settings = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+      rebase.autosquash = true;
 
       user = {
         name = "Nico Rising";
