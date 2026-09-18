@@ -191,11 +191,6 @@
         settings.current_line_blame = true;
       };
 
-      neoscroll = {
-        enable = true;
-        settings.easing_function = "circular";
-      };
-
       # Better navigation between Neovim and tmux
       tmux-navigator.enable = true;
 
