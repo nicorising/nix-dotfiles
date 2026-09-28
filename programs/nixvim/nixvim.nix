@@ -428,6 +428,12 @@
       # Git
       {
         mode = "n";
+        key = "<leader>ga";
+        action = "<cmd>Gitsigns stage_buffer<cr>";
+        options.desc = "Stage file";
+      }
+      {
+        mode = "n";
         key = "<leader>gp";
         action = "<cmd>Gitsigns preview_hunk<cr>";
         options.desc = "Preview Git hunk";
