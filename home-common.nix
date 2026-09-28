@@ -17,7 +17,6 @@
   ];
 
   home.packages = with pkgs; [
-    cargo # Rust package manager
     claude-code # Claude code
     clippy # Rust linter
     eslint_d # JS/JSX linter

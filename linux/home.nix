@@ -60,6 +60,7 @@ in
       bluez-tools
       brightnessctl # CLI screen brightness control
       capitaine-cursors-themed # Cursor theme
+      cargo # Rust package manager
       (scaleApp chirp { GDK_DPI_SCALE = "1.5"; }) # Radio programming tool
       clang-tools # CLI tools for C/C++
       clojure # Clojure
@@ -89,6 +90,7 @@ in
       postman # API testing tool
       prismlauncher # Minecraft launcher
       rainfrog # PostgreSQL TUI
+      rustc # Rust compiler
       signal-desktop
       sl # Steam locomotive
       slack
