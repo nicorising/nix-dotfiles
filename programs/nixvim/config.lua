@@ -2,6 +2,13 @@
 
 vim.api.nvim_create_autocmd("CursorHold", {
     callback = function()
+        -- Don't show if another float is already open
+        for _, win in ipairs(vim.api.nvim_list_wins()) do
+            if vim.api.nvim_win_get_config(win).relative ~= "" then
+                return
+            end
+        end
+
         vim.diagnostic.open_float(nil, { focusable = true })
     end,
 })
