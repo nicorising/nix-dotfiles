@@ -54,6 +54,11 @@
           };
           pyright.enable = true;
           ruff.enable = true;
+          rust_analyzer = {
+            enable = true;
+            installCargo = false;
+            installRustc = false;
+          };
           tailwindcss = {
             enable = true;
             settings.tailwindCSS.colorDecorators = false;
@@ -122,6 +127,7 @@
               "ruff_fix"
               "ruff_format"
             ];
+            rust = [ "rustfmt" ];
             scss = [ "prettier" ];
             sh = [ "shfmt" ];
             terraform = [ "terraform_fmt" ];

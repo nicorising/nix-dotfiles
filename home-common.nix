@@ -17,7 +17,9 @@
   ];
 
   home.packages = with pkgs; [
+    cargo # Rust package manager
     claude-code # Claude code
+    clippy # Rust linter
     eslint_d # JS/JSX linter
     fastfetch # System information display
     fd # File finder
@@ -34,6 +36,9 @@
     prettier # General formatter
     ripgrep # Search tool
     ruff # Python linter/formatter
+    rust-analyzer # Rust language server
+    rustc # Rust compiler
+    rustfmt # Rust formatter
     shfmt # Shell formatter
     terraform # Infrastructure-as-code tool
     tldr # Quick manuals

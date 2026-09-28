@@ -96,7 +96,6 @@ in
       spotify # Spotify
       steam # Steam
       super-slicer-beta # 3D printing
-      teams-for-linux
       tex-fmt # LaTeX formatter
       texliveFull # LaTeX
       qFlipper # Flipper Zero GUI
