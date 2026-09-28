@@ -71,6 +71,7 @@
         keymaps = {
           lspBuf = {
             gd = "definition";
+            gy = "type_definition";
           };
         };
       };
