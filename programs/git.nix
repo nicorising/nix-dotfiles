@@ -18,6 +18,7 @@
       alias = {
         lg = "log --graph --oneline";
         pfwl = "push --force-with-lease";
+        hash = "rev-parse --short HEAD";
 
         # List last 10 branches
         h = ''
