@@ -195,7 +195,10 @@
       # Git QoL in Neovim
       gitsigns = {
         enable = true;
-        settings.current_line_blame = true;
+        settings = {
+          current_line_blame = true;
+          attach_to_untracked = true;
+        };
       };
 
       # Better navigation between Neovim and tmux
@@ -443,6 +446,18 @@
         key = "<leader>gr";
         action = "<cmd>Gitsigns reset_hunk<cr>";
         options.desc = "Reset Git hunk";
+      }
+      {
+        mode = "n";
+        key = "]c";
+        action = "<cmd>Gitsigns nav_hunk next<cr>";
+        options.desc = "Next Git hunk";
+      }
+      {
+        mode = "n";
+        key = "[c";
+        action = "<cmd>Gitsigns nav_hunk prev<cr>";
+        options.desc = "Previous Git hunk";
       }
 
       # Virtual environment selector
