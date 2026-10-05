@@ -45,3 +45,19 @@ require("conform").formatters.eslint_d = {
     end,
     require_cwd = true,
 }
+
+-- TODO: Delete once neovim handles in 0.13
+
+vim.filetype.add({
+    pattern = {
+        ['.*'] = {
+            function(_, bufnr)
+                local line = vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)[1] or ''
+                if vim.regex([[^#!.*\<uv\s\+run\>]]):match_str(line) then
+                    return 'python'
+                end
+            end,
+            { priority = -math.huge },
+        },
+    },
+})
