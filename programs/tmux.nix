@@ -39,7 +39,7 @@
       set -g focus-events on
 
       # Better pane splitting
-      bind | split-window -h -c "#{pane_current_path}"
+      bind '\' split-window -h -c "#{pane_current_path}"
       bind - split-window -v -c "#{pane_current_path}"
 
       # Resize panes with prefix + arrows
