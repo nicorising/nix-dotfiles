@@ -3,8 +3,8 @@
     enable = true;
 
     settings = {
-      "nicorising.com" = {
-        HostName = "nicorising.com";
+      "nicoris.ing" = {
+        HostName = "nicoris.ing";
         User = "nico";
         IdentityFile = "~/.ssh/nicorising_ed25519";
         IdentitiesOnly = true;
