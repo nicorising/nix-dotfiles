@@ -20,11 +20,12 @@
         pfwl = "push --force-with-lease";
         hash = "rev-parse --short HEAD";
 
-        # List last 10 branches
+        # List last branches
         h = ''
           !f() {
+            n=''${1:-10}
             i=0
-            while [ $i -lt 10 ]; do
+            while [ $i -lt $n ]; do
               i=$((i + 1))
               ref=$(git rev-parse --symbolic-full-name @{-$i} 2> /dev/null) || break
               printf "@{-%d} %s\n" "$i" "$ref"
