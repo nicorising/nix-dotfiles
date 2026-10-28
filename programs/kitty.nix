@@ -13,6 +13,7 @@
       background_opacity = 0.95;
       cursor_trail = 10;
       confirm_os_window_close = 0;
+      remember_window_size = "no";
       macos_quit_when_last_window_closed = "yes";
     };
 
