@@ -3,7 +3,7 @@
     maildirBasePath = "mail";
 
     accounts = {
-      personal = {
+      Personal = {
         primary = true;
         address = "nico@nicoris.ing";
         userName = "nico@nicoris.ing";
