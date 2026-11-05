@@ -72,7 +72,6 @@ in
       gnumake # Make
       hyprshot # Screenshot tool
       inotify-tools # Tools for inotify
-      keepassxc # Password manager
       killall # Process killing command
       libnotify # Notification sender
       libreoffice
