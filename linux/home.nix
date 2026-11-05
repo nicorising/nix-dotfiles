@@ -180,12 +180,6 @@ in
       notify = true;
       tray = "always";
     };
-
-    # Inter-device communication
-    kdeconnect = {
-      enable = true;
-      indicator = true;
-    };
   };
 
   fonts.fontconfig = {
