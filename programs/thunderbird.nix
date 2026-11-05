@@ -36,6 +36,9 @@
               "mail.identity.id_${id}.archive_folder" = folder "Archive";
               "mail.server.server_${id}.spamActionTargetAccount" = "imap://nico%40nicoris.ing@mail.nicoris.ing";
               "mail.server.server_${id}.spamActionTargetFolder" = folder "Junk";
+
+              "mail.identity.id_${id}.reply_on_top" = 1;
+              "mail.identity.id_${id}.sig_bottom" = false;
             };
         };
       };
