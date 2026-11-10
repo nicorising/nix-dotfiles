@@ -80,10 +80,7 @@
       # Syntax highlighting and code parsing
       treesitter = {
         enable = true;
-        # TODO: Restore allGrammars once nixpkgs ships a diff parser matching its queries
-        grammarPackages = builtins.filter (
-          g: !(pkgs.lib.hasInfix "diff" g.name)
-        ) pkgs.vimPlugins.nvim-treesitter.allGrammars;
+        grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
 
         highlight.enable = true;
         indent.enable = true;
