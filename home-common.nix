@@ -19,7 +19,6 @@
   home.packages = with pkgs; [
     claude-code # Claude code
     clippy # Rust linter
-    eslint_d # JS/JSX linter
     fastfetch # System information display
     fd # File finder
     ffmpeg # Image processing
@@ -31,8 +30,9 @@
     nil # Nix language server
     nixfmt # Nix formatter
     nodejs # Node.js
+    oxfmt
+    oxlint
     pre-commit # Git pre-commit hook manager
-    prettier # General formatter
     ripgrep # Search tool
     ruff # Python linter/formatter
     rust-analyzer # Rust language server
@@ -42,6 +42,7 @@
     terraform # Infrastructure-as-code tool
     tldr # Quick manuals
     tree-sitter # Parser generator tool
+    ty # Python type checker
     unzip # Unzip utility
     uv # Python package manager
     zip # Zip file tools

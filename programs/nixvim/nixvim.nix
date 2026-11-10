@@ -52,7 +52,7 @@
             enable = true;
             settings.nix.flake.autoArchive = true; # Auto-fetch flake inputs
           };
-          pyright.enable = true;
+          oxlint.enable = true;
           ruff.enable = true;
           rust_analyzer = {
             enable = true;
@@ -66,6 +66,7 @@
           terraformls.enable = true;
           texlab.enable = true;
           ts_ls.enable = true;
+          ty.enable = true;
         };
 
         keymaps = {
@@ -105,45 +106,34 @@
             arduino = [ "clang_format" ];
             c = [ "clang_format" ];
             cpp = [ "clang_format" ];
-            css = [ "prettier" ];
-            graphql = [ "prettier" ];
-            handlebars = [ "prettier" ];
-            html = [ "prettier" ];
-            javascript = [
-              "eslint_d"
-              "prettier"
-            ];
-            javascriptreact = [
-              "eslint_d"
-              "prettier"
-            ];
-            json = [ "prettier" ];
-            json5 = [ "prettier" ];
-            jsonc = [ "prettier" ];
-            less = [ "prettier" ];
-            markdown = [ "prettier" ];
-            "markdown.mdx" = [ "prettier" ];
+            css = [ "oxfmt" ];
+            graphql = [ "oxfmt" ];
+            handlebars = [ "oxfmt" ];
+            html = [ "oxfmt" ];
+            javascript = [ "oxfmt" ];
+            javascriptreact = [ "oxfmt" ];
+            json = [ "oxfmt" ];
+            json5 = [ "oxfmt" ];
+            jsonc = [ "oxfmt" ];
+            less = [ "oxfmt" ];
+            markdown = [ "oxfmt" ];
+            "markdown.mdx" = [ "oxfmt" ];
             nix = [ "nixfmt" ];
             python = [
               "ruff_fix"
               "ruff_format"
             ];
             rust = [ "rustfmt" ];
-            scss = [ "prettier" ];
+            scss = [ "oxfmt" ];
             sh = [ "shfmt" ];
             terraform = [ "terraform_fmt" ];
             "terraform-vars" = [ "terraform_fmt" ];
             tex = [ "tex-fmt" ];
-            typescript = [
-              "eslint_d"
-              "prettier"
-            ];
-            typescriptreact = [
-              "eslint_d"
-              "prettier"
-            ];
-            vue = [ "prettier" ];
-            yaml = [ "prettier" ];
+            toml = [ "oxfmt" ];
+            typescript = [ "oxfmt" ];
+            typescriptreact = [ "oxfmt" ];
+            vue = [ "oxfmt" ];
+            yaml = [ "oxfmt" ];
           };
         };
       };
