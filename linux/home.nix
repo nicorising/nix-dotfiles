@@ -39,7 +39,6 @@ in
     ../programs/hyprland/hyprland.nix
     ../programs/hyprlock.nix
     ../programs/librewolf.nix
-    ../programs/nh.nix
     ../programs/nixvim/latex.nix
     ../programs/ssh.nix
     ../programs/thunderbird.nix

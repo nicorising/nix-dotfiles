@@ -115,32 +115,42 @@
     enable32Bit = true;
   };
 
-  # Shared libraries for dynamically linked binaries
-  programs.nix-ld = {
-    enable = true;
+  programs = {
+    # Shared libraries for dynamically linked binaries
+    nix-ld = {
+      enable = true;
 
-    libraries = with pkgs; [
-      glib
-      libGL
-      libice
-      libsm
-      libx11
-      libxcb
-      libxext
-      libxi
-      libxkbcommon
-      stdenv.cc.cc.lib
-      wayland
-      zlib
-    ];
+      libraries = with pkgs; [
+        glib
+        libGL
+        libice
+        libsm
+        libx11
+        libxcb
+        libxext
+        libxi
+        libxkbcommon
+        stdenv.cc.cc.lib
+        wayland
+        zlib
+      ];
+    };
+
+    nh = {
+      enable = true;
+      clean = {
+        enable = true;
+        extraArgs = "--keep 3 --keep-since 7d";
+      };
+    };
+
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+
+    hyprland.enable = true;
   };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
-
-  programs.hyprland.enable = true;
 
   services.greetd = {
     enable = true;
