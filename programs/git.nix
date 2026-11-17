@@ -7,6 +7,7 @@
 
     settings = {
       init.defaultBranch = "main";
+      branch.autoSetupMerge = "simple";
       push.autoSetupRemote = true;
       rebase.autosquash = true;
 
