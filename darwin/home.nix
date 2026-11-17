@@ -12,7 +12,6 @@
     packages = with pkgs; [
       awscli2
       postgresql_16
-      postman
       ssm-session-manager-plugin
     ];
 

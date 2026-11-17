@@ -30,6 +30,7 @@
     nil # Nix language server
     nixfmt # Nix formatter
     nodejs # Node.js
+    osv-scanner
     oxfmt
     oxlint
     pre-commit # Git pre-commit hook manager
